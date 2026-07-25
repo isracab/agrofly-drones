@@ -4,6 +4,8 @@ export const contactInfo = {
   whatsappHref: "https://wa.me/523541205738",
   secondaryPhoneDisplay: "871 524 6062",
   secondaryPhoneHref: "tel:+528715246062",
+  officePhoneDisplay: "321 688 0793",
+  officePhoneHref: "tel:+523216880793",
   email: "ventas@agrofly.mx",
   facebookHref: "https://www.facebook.com/profile.php?id=61591587517380",
   address:

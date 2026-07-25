@@ -98,6 +98,9 @@ export function Footer() {
           <a href={contactInfo.secondaryPhoneHref}>
             {contactInfo.secondaryPhoneDisplay}
           </a>
+          <a href={contactInfo.officePhoneHref}>
+            Oficina: {contactInfo.officePhoneDisplay}
+          </a>
           <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
           <a
             href={contactInfo.whatsappHref}
@@ -117,12 +120,15 @@ export function Footer() {
           >
             Facebook
           </a>
+          <a href={contactInfo.mapsHref} target="_blank" rel="noreferrer">
+            {contactInfo.address}
+          </a>
         </div>
       </div>
       <div className="shell footer-bottom">
         <span>© 2026 Agrofly. Todos los derechos reservados.</span>
         <span>Precios actualizados a julio de 2026.</span>
-        <span>Desarrollado por django.labs</span>
+        <span>Built by django.labs</span>
       </div>
     </footer>
   );
