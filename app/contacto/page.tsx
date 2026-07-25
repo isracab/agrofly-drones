@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { contactInfo } from "../contact-info";
 import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
@@ -30,26 +31,60 @@ export default function ContactPage() {
               donde trabajas. Te responderemos con una recomendación inicial.
             </p>
             <div className="contact-direct">
-              <a href="tel:+5218715246062">
-                <span>Teléfono</span>
-                <strong>+52 1 871 524 6062</strong>
+              <a href={contactInfo.primaryPhoneHref}>
+                <span>Teléfono principal</span>
+                <strong>{contactInfo.primaryPhoneDisplay}</strong>
               </a>
-              <a href="mailto:ventas@agrofly.mx">
+              <a href={contactInfo.secondaryPhoneHref}>
+                <span>Teléfono secundario</span>
+                <strong>{contactInfo.secondaryPhoneDisplay}</strong>
+              </a>
+              <a href={`mailto:${contactInfo.email}`}>
                 <span>Correo</span>
-                <strong>ventas@agrofly.mx</strong>
+                <strong>{contactInfo.email}</strong>
               </a>
               <a
-                href="https://wa.me/5218715246062"
+                href={contactInfo.whatsappHref}
                 target="_blank"
                 rel="noreferrer"
               >
                 <span>WhatsApp</span>
                 <strong>Escribir ahora ↗</strong>
               </a>
+              <a href={contactInfo.mapsHref} target="_blank" rel="noreferrer">
+                <span>Dirección</span>
+                <strong>{contactInfo.address}</strong>
+              </a>
             </div>
           </div>
 
           <ContactForm />
+        </div>
+      </section>
+
+      <section className="section map-section">
+        <div className="shell map-heading">
+          <div>
+            <p className="eyebrow">Ubicación</p>
+            <h2>Visítanos en El Grullo, Jalisco.</h2>
+          </div>
+          <a
+            className="text-link"
+            href={contactInfo.mapsHref}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Abrir en Google Maps <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div className="shell map-frame">
+          <iframe
+            title="Ubicación Agrofly en Google Maps"
+            src={contactInfo.mapsEmbedSrc}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
         </div>
       </section>
     </main>

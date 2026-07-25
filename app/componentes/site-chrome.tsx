@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { publicAsset } from "../asset-path";
+import { contactInfo } from "../contact-info";
 
 const navigation = [
   { href: "/", label: "Inicio" },
@@ -93,10 +94,13 @@ export function Footer() {
         </div>
         <div>
           <p className="footer-title">Contacto</p>
-          <a href="tel:+5218715246062">+52 1 871 524 6062</a>
-          <a href="mailto:ventas@agrofly.mx">ventas@agrofly.mx</a>
+          <a href={contactInfo.primaryPhoneHref}>{contactInfo.primaryPhoneDisplay}</a>
+          <a href={contactInfo.secondaryPhoneHref}>
+            {contactInfo.secondaryPhoneDisplay}
+          </a>
+          <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
           <a
-            href="https://wa.me/5218715246062"
+            href={contactInfo.whatsappHref}
             target="_blank"
             rel="noreferrer"
           >
@@ -105,14 +109,20 @@ export function Footer() {
         </div>
         <div>
           <p className="footer-title">Síguenos</p>
-          <a href="#" aria-label="Agrofly en Instagram">Instagram</a>
-          <a href="#" aria-label="Agrofly en Facebook">Facebook</a>
-          <a href="#" aria-label="Agrofly en YouTube">YouTube</a>
+          <a
+            href={contactInfo.facebookHref}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Agrofly en Facebook"
+          >
+            Facebook
+          </a>
         </div>
       </div>
       <div className="shell footer-bottom">
         <span>© 2026 Agrofly. Todos los derechos reservados.</span>
         <span>Precios actualizados a julio de 2026.</span>
+        <span>Desarrollado por django.labs</span>
       </div>
     </footer>
   );

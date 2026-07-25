@@ -25,7 +25,7 @@ export function ContactForm() {
       <div className="form-row">
         <label>
           Teléfono *
-          <input name="telefono" type="tel" placeholder="871 524 6062" required />
+          <input name="telefono" type="tel" placeholder="354 120 5738" required />
         </label>
         <label>
           Correo

@@ -17,6 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://isracab.github.io"),
   title: {
     default: "Agrofly | Drones agrícolas DJI Agras",
     template: "%s | Agrofly",
@@ -29,6 +30,23 @@ export const metadata: Metadata = {
   icons: {
     icon: publicAsset("/favicon.svg"),
     shortcut: publicAsset("/favicon.svg"),
+  },
+  openGraph: {
+    title: "Agrofly | Drones agrícolas DJI Agras",
+    description:
+      "Distribuidor de drones agrícolas DJI Agras T100, T70P, T55 y T25P en México.",
+    images: [
+      {
+        url: publicAsset("/images/agrofly-og-image.jpg"),
+        width: 1080,
+        height: 1080,
+        alt: "Agrofly",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [publicAsset("/images/agrofly-og-image.jpg")],
   },
 };
 
