@@ -9,7 +9,7 @@ export const contactInfo = {
   email: "ventas@agrofly.mx",
   facebookHref: "https://www.facebook.com/profile.php?id=61591587517380",
   address:
-    "Circunvalación Oriente 32 Col del sur El grullo, Jalisco C.P. 48743",
+    "Circunvalación Oriente 32 Col del sur El Grullo, Jalisco C.P. 48743",
   mapsHref:
     "https://www.google.com/maps/place/Circunvalaci%C3%B3n+Ote.+32,+Del+Sur,+48743+El+Grullo,+Jal./@19.7997883,-104.2191272,17z/data=!3m1!4b1!4m6!3m5!1s0x8425aa4a76e87f29:0x95d645f5601e3d38!8m2!3d19.7997833!4d-104.2165523!16s%2Fg%2F11q2n9xr9z?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D",
   mapsEmbedSrc:
