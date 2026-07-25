@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { publicAsset } from "./asset-path";
 import { Footer, Header } from "./componentes/site-chrome";
 
 const geistSans = localFont({
@@ -26,8 +27,8 @@ export const metadata: Metadata = {
     "codex-preview": "development",
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: publicAsset("/favicon.svg"),
+    shortcut: publicAsset("/favicon.svg"),
   },
 };
 

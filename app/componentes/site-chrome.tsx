@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { publicAsset } from "../asset-path";
 
 const navigation = [
   { href: "/", label: "Inicio" },
@@ -18,8 +19,8 @@ export function Brand({ footer = false }: { footer?: boolean }) {
         className="brand-logo"
         src={
           footer
-            ? "/images/agrofly-footer-logo-transparent.png"
-            : "/images/agrofly-logo.webp"
+            ? publicAsset("/images/agrofly-footer-logo-transparent.png")
+            : publicAsset("/images/agrofly-logo.webp")
         }
         alt="Agrofly DJI Solutions"
         width={footer ? 1714 : 1200}

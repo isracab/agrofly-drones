@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { publicAsset } from "../asset-path";
 import type { DroneModel } from "../datos";
 
 const specLabels: Array<[keyof DroneModel, string]> = [
@@ -38,7 +39,7 @@ export function ModelDetail({ model }: { model: DroneModel }) {
           <div className="detail-media">
             <div className="detail-primary">
               <Image
-                src={model.image}
+                src={publicAsset(model.image)}
                 alt={`${model.name} en operación agrícola`}
                 width={1200}
                 height={900}
@@ -56,7 +57,7 @@ export function ModelDetail({ model }: { model: DroneModel }) {
                 {model.gallery.map((image, index) => (
                   <Image
                     key={image}
-                    src={image}
+                    src={publicAsset(image)}
                     alt={`${model.name} en campo, vista ${index + 2}`}
                     width={900}
                     height={600}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { publicAsset } from "./asset-path";
 import { ModelCard } from "./componentes/model-card";
 import { models } from "./datos";
 
@@ -10,7 +11,7 @@ export default function Home() {
         <div className="hero-backdrop" aria-hidden="true" />
         <Image
           className="hero-image"
-          src="/images/dji-agras-t100-2.webp"
+          src={publicAsset("/images/dji-agras-t100-2.webp")}
           alt="DJI Agras T100 pulverizando un cultivo"
           fill
           sizes="100vw"

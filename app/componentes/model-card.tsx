@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { publicAsset } from "../asset-path";
 import type { DroneModel } from "../datos";
 
 export function ModelCard({ model }: { model: DroneModel }) {
@@ -8,7 +9,7 @@ export function ModelCard({ model }: { model: DroneModel }) {
       <Link className="model-image-wrap" href={`/modelos/${model.slug}`}>
         <Image
           className="model-image"
-          src={model.image}
+          src={publicAsset(model.image)}
           alt={`${model.name} en operación agrícola`}
           width={900}
           height={675}
