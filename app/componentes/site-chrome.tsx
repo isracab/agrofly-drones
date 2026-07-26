@@ -120,6 +120,14 @@ export function Footer() {
           >
             Facebook
           </a>
+          <a
+            href={contactInfo.instagramHref}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Agrofly en Instagram"
+          >
+            Instagram
+          </a>
           <a href={contactInfo.mapsHref} target="_blank" rel="noreferrer">
             {contactInfo.address}
           </a>

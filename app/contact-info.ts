@@ -8,6 +8,7 @@ export const contactInfo = {
   officePhoneHref: "tel:+523216880793",
   email: "ventas@agrofly.mx",
   facebookHref: "https://www.facebook.com/profile.php?id=61591587517380",
+  instagramHref: "https://www.instagram.com/agroflydjisolutions/",
   address:
     "Circunvalación Oriente 32 Col del sur El Grullo, Jalisco C.P. 48743",
   mapsHref:
